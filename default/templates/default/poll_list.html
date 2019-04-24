@@ -3,6 +3,8 @@
 {% block content %}
 <h1>投票主題列表</h1>
 
+<a href="/vote/create/">新增投票主題</a>
+
 {% for item in poll_list %}
    <div>{{item.date_created}} <a href="/poll/{{ item.id}}/">{{ item.subject }}</a></div>
 {% endfor %}    
