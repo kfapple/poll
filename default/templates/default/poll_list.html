@@ -6,7 +6,7 @@
 <a href="/vote/create/">新增投票主題</a>
 
 {% for item in poll_list %}
-   <div>{{item.date_created}} <a href="/poll/{{ item.id}}/">{{ item.subject }}</a></div>
+   <div>{{item.date_created}} <a href="/poll/{{ item.id}}/">{{ item.subject }}</a>  <a href="/poll/{{ item.id }}/update/">Update</a></div>
 {% endfor %}    
 {% endblock %}
 
