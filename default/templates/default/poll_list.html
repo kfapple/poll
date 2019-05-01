@@ -4,15 +4,16 @@
 <h1>投票主題列表</h1>
 
 <a href="/vote/create/">新增投票主題</a>
-
+<ul>
 {% for item in poll_list %}
-  <div>
+  <li>
     {{item.date_created}} <a href="/poll/{{ item.id}}/">{{ item.subject }}</a>
     | <a href="/poll/{{ item.id }}/update/">修改</a>
     | <a href="/poll/{{ item.id }}/delete/">刪除</a>
     | <a href="/option/create/{{ item.id }}">新增選項</a>
-  </div>
-{% endfor %}    
+  </li>
+{% endfor %}   
+</ul> 
 {% endblock %}
 
 {% block page_title %}主題列表{% endblock %}

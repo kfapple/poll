@@ -8,8 +8,12 @@
 {{ poll }}
 <ul>
    {% for item in options %}
-   <li><a href="/vote/{{ item.id }}/">{{item.title}}</a>: {{item.count}}票</li>
+   <li><a href="/vote/{{ item.id }}/">{{item.title}}</a>: {{item.count}}票
+   |<a href="/option/{{ item.id }}/update/">修改</a>
+   |<a href="/option/{{ item.id }}/delete/">刪除</a>
+   </li>
    {% endfor %}
+   
 </ul>
 <a href="/poll/">回投票主題列表</a>
 {% endblock %}
